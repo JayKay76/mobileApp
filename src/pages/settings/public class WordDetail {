@@ -1,0 +1,29 @@
+public class WordDetail {
+
+	// attributes
+	private String wordType;
+	private String wordDefinition;
+
+	public WordDetail(String wordType, String wordDefinition) {
+		super();
+		this.wordType = wordType;
+		this.wordDefinition = wordDefinition;
+	}
+
+	public String getWordType() {
+		return wordType;
+	}
+
+	public void setWordType(String wordType) {
+		this.wordType = wordType;
+	}
+
+	public String getWordDefinition() {
+		return wordDefinition;
+	}
+
+	public void setWordDefinition(String wordDefinition) {
+		this.wordDefinition = wordDefinition;
+	}
+
+}

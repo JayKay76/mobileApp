@@ -1,0 +1,143 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="settings">
+  <h5 id="settings-heading3" style="color:#1352F3;">
+    Enter Name
+  </h5>
+  <form id="settings-form1">
+    <ion-item id="settings-input5">
+      <ion-label>
+        Name
+      </ion-label>
+      <ion-input type="text"  placeholder=""></ion-input>
+    </ion-item>
+    
+    <form id="settings-form2">
+      <p>
+      <h3 id="settings-heading5" style="color:#000000;">
+        News Sources {{ newsSource}} 
+      </h3>
+
+      <div id="settings-markdown2" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Source
+      </p>
+    </div>
+    <ion-list radio-group  ="newsSource">
+      <ion-item id="settings-radio3">
+        <ion-label>
+          Reuters
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio2">
+        <ion-label>
+          National Geographic
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio4">
+        <ion-label>
+          BBC Sport
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+    </ion-list>
+      <h3 id="settings-heading4" style="color:#000000;">
+        Font Size
+      </h3>
+      <div id="settings-markdown3" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          Title
+        </p>
+      </div>
+    <ion-list radio-group  ="fontSize">
+      <ion-item id="settings-radio5">
+        <ion-label>
+          1
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio6">
+        <ion-label>
+          2
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio5">
+        <ion-label>
+          3
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio6">
+        <ion-label>
+          4
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio5">
+        <ion-label>
+          5
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+    </ion-list>
+      <div id="settings-markdown5" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          Description
+        </p>
+      </div>
+    <ion-list radio-group  ="fontSize">
+      <ion-item id="settings-radio5">
+        <ion-label>
+          1
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio6">
+        <ion-label>
+          2
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio5">
+        <ion-label>
+          3
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio6">
+        <ion-label>
+          4
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item id="settings-radio6">
+        <ion-label>
+          5
+        </ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+    </ion-list>
+      <button (click)= "saveOptions()" id="save options" ion-button round  color="positive">
+        Save
+      </button>
+    </form>
+  </form>
+</ion-content>
