@@ -15,6 +15,11 @@ export class QuoteProvider {
   constructor(public http: HttpClient) {
     console.log('Hello QuoteProvider Provider');
   }
+   
+  /*
+  * The function below make the call to the API to get the quote source. The information is then extracted and put 
+  * together when the below function are called on the HomePage.ts.  
+  */
 
    getQuotes(): Observable<any>{
    	console.log('Hello');

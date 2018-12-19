@@ -12,6 +12,8 @@ import { NewsPage} from '../pages/news/news'
 import { NewsProvider } from '../providers/news/news';
 import { QuoteProvider } from '../providers/quote/quote';
 
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +32,8 @@ import { QuoteProvider } from '../providers/quote/quote';
     MyApp,
     HomePage,
     SettingsPage,
-    NewsPage
+    NewsPage,
+    
 
   ],
   providers: [

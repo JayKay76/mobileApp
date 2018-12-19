@@ -1,22 +1,28 @@
 <!--
-  Generated template for the NewsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
+   NewsPage page.
+-->
+<!--
+   NewsPage Header.
 -->
 <ion-header>
   <ion-navbar>
     <ion-title>News</ion-title>
   </ion-navbar>
 </ion-header>
-
-
+<!--
+   NewsPage NewsSource. It will consist of an Image at the top, then news story title and more detail of the news story below.
+   The variables {{n.*}} are got from the https://newsapi.org/. The "n" is declared in the *ngFor below". It gets the information from the news.ts which got it's information from the news.ts-providers file"
+-->
 <ion-content padding>
-	<ion-list>
+	<ion-list>   
 		<ion-item *ngFor="let n of news">
-			<ion-img width="200" height="200" src="{{ n.urlToImage }}"></ion-img>
-			<h2>{{ n.title}}</h2>
-			<p>{{ n.description }}</p>
+		<ion-card-header text-wrap>	
+         <ion-card-content>
+			<a href="{{ n.urlToImage }}"><img  width="180" height="110"src="{{ n.urlToImage }}"></a>
+			<a href="{{n.url}}"><h2><font size="{{variable}}">{{ n.title}}</font> </h2></a>
+			<a href="{{n.url}}"><p><font size="{{desVariable}}">{{ n.description }}</font></p></a>
+        </ion-card-content>
+        </ion-card-header>
 		</ion-item>
 	</ion-list>
 </ion-content>

@@ -1,8 +1,8 @@
 <!--
-  Generated template for the SettingsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
+ SettingsPage Page.
+-->
+<!--
+ SettingsPage Header.
 -->
 <ion-header>
   <ion-navbar>
@@ -15,129 +15,140 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="settings">
-  <h5 id="settings-heading3" style="color:#1352F3;">
+<ion-content padding id="SettingsPage">
+<!--
+ SettingsPage Enter Name Section. The name will appear on the HomePage after the save button on the SettingsPage has been set.
+ The name will then be stored in local storage and retrieved from local storage on the HomePage
+-->
+  <h5 id="Enter Name" style="color:#1352F3;">
     Enter Name
   </h5>
-  <form id="settings-form1">
-    <ion-item id="settings-input5">
+    
+    <ion-item id="Enter Name Input">
       <ion-label>
         Name
       </ion-label>
-      <ion-input type="text"  placeholder=""></ion-input>
+      <ion-input type="text" [(ngModel)]="newName" ></ion-input>
     </ion-item>
-    
-    <form id="settings-form2">
+      <!--
+      SettingsPage News Source Radio Button Section. When an user selects a radio button. It will choose one of the below news sources which are got from https://newsapi.org/
+      -->
       <p>
-      <h3 id="settings-heading5" style="color:#000000;">
-        News Sources {{ newsSource}} 
+      <h3 id="News Sources" style="color:#000000;">
+        News Sources 
       </h3>
-
-      <div id="settings-markdown2" class="show-list-numbers-and-dots">
+      <div id="News Sources" class="News Sources">
       <p style="color:#000000;">
         Source
       </p>
     </div>
-    <ion-list radio-group  ="newsSource">
-      <ion-item id="settings-radio3">
-        <ion-label>
+    <ion-list radio-group [(ngModel)]="newsStatus">
+      <ion-item id="Reuters Radio Button section">
+        <ion-label >
           Reuters
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio  value="1" ></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio2">
+      <ion-item id="National Geographic Radio Button section">
         <ion-label>
           National Geographic
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio  value="2"></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio4">
+      <ion-item id="BBC Sport Radio Button section">
         <ion-label>
           BBC Sport
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="3" ></ion-radio>
       </ion-item>
     </ion-list>
-      <h3 id="settings-heading4" style="color:#000000;">
+      <!--
+      SettingsPage Title Font Size Radio Button Section. The Heading font size on the News Source title will change depending on the button choosen below
+      -->
+      <h3 id="Font Size Heading" style="color:#000000;">
         Font Size
       </h3>
-      <div id="settings-markdown3" class="show-list-numbers-and-dots">
+      <div id="titleFontSize" class="titleFontSize">
         <p style="color:#000000;">
           Title
         </p>
       </div>
-    <ion-list radio-group  ="fontSize">
-      <ion-item id="settings-radio5">
+    <ion-list radio-group [(ngModel)]="titleFontStatus">
+      <ion-item id="titleFontSize1">
         <ion-label>
           1
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="1" ></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio6">
+      <ion-item id="titleFontSize2">
         <ion-label>
           2
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="2" ></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio5">
+      <ion-item id="titleFontSize3">
         <ion-label>
           3
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="3" ></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio6">
+      <ion-item id="titleFontSize4">
         <ion-label>
           4
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="4" ></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio5">
+      <ion-item id="titleFontSize5">
         <ion-label>
           5
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="5" ></ion-radio>
       </ion-item>
     </ion-list>
-      <div id="settings-markdown5" class="show-list-numbers-and-dots">
+    <!--
+      SettingsPage Description Font Size Radio Button Section. The font size on the News Source desription will change depending on the button choosen below
+      -->
+      <div id="Gap-Between-FontSizes" class="Description FontSize">
         <p style="color:#000000;">
           Description
         </p>
       </div>
-    <ion-list radio-group  ="fontSize">
-      <ion-item id="settings-radio5">
+    <ion-list radio-group [(ngModel)] ="descriptionFontSize">
+      <ion-item id="descriptionFontSize1">
         <ion-label>
           1
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="1"></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio6">
+      <ion-item id="descriptionFontSize2">
         <ion-label>
           2
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="2"></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio5">
+      <ion-item id="descriptionFontSize3">
         <ion-label>
           3
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="3"></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio6">
+      <ion-item id="descriptionFontSize4">
         <ion-label>
           4
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="4"></ion-radio>
       </ion-item>
-      <ion-item id="settings-radio6">
+      <ion-item id="descriptionFontSize5">
         <ion-label>
           5
         </ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value="5"></ion-radio>
       </ion-item>
     </ion-list>
+    <!--
+      SettingsPage Save Button Section.
+      -->
       <button (click)= "saveOptions()" id="save options" ion-button round  color="positive">
         Save
-      </button>
-    </form>
-  </form>
+      </button>  
 </ion-content>

@@ -1,3 +1,9 @@
+<!--
+ HomePage Page.
+-->
+<!--
+ HomePage Header with Settings Button.
+-->
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -10,18 +16,29 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page1">
-  <h1 id="myNewsApp-heading1" style="color:#000000;">
-    Welcome
+<ion-content padding id="HomePage">
+  <!--
+  HomePage Welcome Section getting the name entered from Settings Page and retrieved from local storage.
+  -->
+  <h1 id="Welcome Heading" style="color:#000000;">
+    Welcome name: {{ name }}
   </h1>
+  <!--
+  HomePage News Button Section. When Clicked the user is redirected to the NewsPage. The Source is depended on what source the user
+  selected on the SettingsPage.
+  -->
   <button ion-button round (click)="openNewsPage()"><ion-icon name="globe"><br></ion-icon>
   	NEWS	
   </button>
   <p>
   <p>
   <p>
+  <!--
+  HomePage Quote Section. The quote appears here and is refreshed daily. The quote is got from the following API 
+  http://quotes.rest/qod.json
+  -->
   		<ion-card-content *ngFor="let q of contents">
-  			<p> {{q.quote}} </p>
+  			<p>{{q.quote}} </p>
   			<p>{{q.author}}</p>
 		</ion-card-content>
 </ion-content>
